@@ -39,6 +39,9 @@ public class WeightedQuickUnion {
 		int pRoot = root(p);
 		int qRoot = root(q);
 		
+		if(pRoot == qRoot)
+			return;
+				
 		if(size[pRoot] > size[qRoot]) {
 			parent[qRoot] = pRoot;
 			size[pRoot] += size[qRoot];
